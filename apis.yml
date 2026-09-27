@@ -1,23 +1,68 @@
 aid: azurengine
+
 name: Azurengine
-description: 'Azurengine is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'AzurEngine Technologies develops innovative reconfigurable parallel processor (RPP) architecture, delivering high‑performance, power‑efficient chips for AI, edge, and data‑center workloads. The company offers advanced processor solutions, engineering services, and developer support to accelerate parallel computing applications across industries.'
+
 url: https://raw.githubusercontent.com/api-evangelist/azurengine/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Semiconductor
+- Parallel Computing
+- AI Hardware
+- Reconfigurable Architecture
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/azurengine-well-known.yml
+- type: Hosts
+  url: hosts/azurengine-hosts.yml
+- type: Vendors
+  url: vendors/azurengine-vendors.yml
+- type: Newsroom
+  url: https://azurengine.com/news/
+- type: DomainSecurity
+  url: security/azurengine-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/azurengine
+  url: https://azurengine.com
+- type: Support
+  url: https://azurengine.com/developer-support/
+- type: Documentation
+  url: https://azurengine.com/developer-support/
+
+apis: []
+
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  detail: Developer support page returns HTTP 429 bot challenge, preventing access to API docs.
+  evidence:
+    - url: https://azurengine.com/developer-support/
+      status: 429
+  checked: 2026-09-27
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
